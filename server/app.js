@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // Crea un server de archivos estaticos
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Registro de Middlewares de aplicación
 app.use('/', indexRouter);
@@ -31,7 +31,7 @@ app.use('/', indexRouter);
 // solicita "/users"
 app.use('/users', usersRouter);
 // app.use('/author', (req, res)=>{
-//   res.json({mainDeveloper: "Ivan Rivalcoba"})
+//   res.json({mainDeveloper: "Luis Xicotencatl"})
 // });
 
 // catch 404 and forward to error handler
